@@ -38,12 +38,14 @@ function verificar_directorio() {
 
     #faz a contagem da quantidade de arquvos
     while [ $i -lt ${#arquivos[@]} ]; do
+        arquivo="${arquivos[$i]}"
         if [ -f "$arquivo" ]; then
             verificar_conflito "$arquivo"
 
         elif [ -d "$arquivo" ]; then
             verificar_directorio "$arquivo"
         fi
+        ((i++))
     done  
 }
 
