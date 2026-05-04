@@ -28,7 +28,7 @@ function verificar_conflito() {
 #    done  
 #}
 
-
+#funcao recursiva que verifica directorios
 function verificar_directorio() {
     
     local directorio="$1"
