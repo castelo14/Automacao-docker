@@ -48,6 +48,12 @@ function verificar_directorio() {
         ((i++))
     done  
 }
+#verifica a quantidade de parametro passada pelo user
+if [  $# -ne 1 ]; then
+    echo "Uso: $0 <directorio> "
+    exit 1
+fi
+
 
 verificar_directorio "$1"
 
